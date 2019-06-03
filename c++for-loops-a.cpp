@@ -1,5 +1,5 @@
 //
-// Loop exercises
+// Loop exercises from www.w3resource.com
 //
 #include <iostream>
 using namespace std;
