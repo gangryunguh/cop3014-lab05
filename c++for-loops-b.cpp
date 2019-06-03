@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 
     /* prob11:
-       Write a program in C++ to calculate the sum of the series
+       Write a program to calculate the sum of the series
        (1*1) + (2*2) + (3*3) + (4*4) + (5*5) + ... + (n*n).
        Sample Output:
        Input the value for nth term: 5
@@ -21,7 +21,7 @@ int main() {
 
 
     /* prob12:
-       Write a program in C++ to calculate the series
+       Write a program to calculate the series
        (1) + (1+2) + (1+2+3) + (1+2+3+4) + ... + (1+2+3+4+...+n).
        Sample Output:
        Input the value for nth term: 5
@@ -35,7 +35,7 @@ int main() {
 
 
     /* prob13:
-       Write a program in C++ to find the sum of series
+       Write a program to find the sum of series
        1 - X^2/2! + X^4/4!-.... upto nth term. Go to the editor
        Sample Output:
        Input the value of X: 3
@@ -49,7 +49,7 @@ int main() {
 
 
     /* prob14:
-       Write a program in C++ to list non-prime numbers from 1 to an upperbound.
+       Write a program to list non-prime numbers from 1 to an upperbound.
        Sample Output:
        Input the upperlimit: 25
        The non-prime numbers are:
@@ -58,7 +58,7 @@ int main() {
 
 
     /* prob15:
-       Write a program in C++ to print a square pattern with # character.
+       Write a program to print a square pattern with # character.
        Sample Output:
        Print a pattern like square with # character:
        --------------------------------------------------
@@ -71,7 +71,7 @@ int main() {
 
 
     /* prob16:
-       Write a program in C++ to display the multiplication table vertically from 1 to n.
+       Write a program to display the multiplication table vertically from 1 to n.
        Sample Output:
        Input the number upto: 5
        Multiplication table from 1 to 5
@@ -89,7 +89,7 @@ int main() {
 
 
     /* prob17:
-       Write a program in C++ to display the n terms of odd natural number and their sum.
+       Write a program to display the n terms of odd natural number and their sum.
        Sample Output:
        Input number of terms: 5
        The odd numbers are: 1 3 5 7 9
@@ -98,7 +98,7 @@ int main() {
 
 
     /* prob18:
-       Write a program in C++ to display the n terms of even natural number and their sum.
+       Write a program to display the n terms of even natural number and their sum.
        Sample Output:
        Input number of terms: 5
        The even numbers are: 2 4 6 8 10
@@ -107,7 +107,7 @@ int main() {
 
 
     /* prob19:
-       Write a program in C++ to display the n terms of harmonic series and their sum.
+       Write a program to display the n terms of harmonic series and their sum.
        1 + 1/2 + 1/3 + 1/4 + 1/5 ... 1/n terms
        Sample Output:
        Input number of terms: 5
@@ -117,7 +117,7 @@ int main() {
 
 
     /* prob20:
-       Write a program in C++ to display the sum of the series [ 9 + 99 + 999 + 9999 ...].
+       Write a program to display the sum of the series [ 9 + 99 + 999 + 9999 ...].
        Sample Output:
        Input number of terms: 5
        9 99 999 9999 99999
