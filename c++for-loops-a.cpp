@@ -2,6 +2,7 @@
 // Loop exercises from www.w3resource.com
 //
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main() {
@@ -12,6 +13,10 @@ int main() {
        The natural numbers are:
        1 2 3 4 5 6 7 8 9 10
      */
+    cout << "The natural numbers are:\n";
+    for (int i = 0; i < 10; i++)
+        cout << i+1 << " ";
+    cout << '\b' << endl << endl;
 
 
     /* prob2:
@@ -20,6 +25,12 @@ int main() {
        1 2 3 4 5 6 7 8 9 10
        The sum of first 10 natural numbers: 55
      */
+    cout << "The natural numbers are:\n";
+    cout << "1 2 3 4 5 6 7 8 9 10\n";
+    int sum = 0;
+    for (int i = 1; i <= 10; i++)
+        sum = sum + i;
+    cout << "The sum of first 10 natural numbers: " << sum << endl << endl;
 
 
     /* prob3:
@@ -30,6 +41,16 @@ int main() {
        1 2 3 4 5 6 7
        The sum of the natural numbers is: 28
      */
+    cout << "Input a number of terms: " << flush;
+    int terms;
+    cin >> terms;
+    cout << "The natural numbers upto " << terms << "th terms are: " << endl;
+    sum = 0;
+    for (int i = 1; i <= terms; i++) {
+        cout << i << " ";
+        sum += i;
+    }
+    cout << "The sum of the natural numbers: " << sum << endl << endl;
 
 
     /* prob4:
@@ -38,6 +59,18 @@ int main() {
        Input a number to check prime or not: 13
        The entered number is a prime number.
      */
+    int pnum;
+    cout << "Input a number to check prime or not: " << flush;
+    cin >> pnum;
+    bool isPrime = true;
+    for (int i = 2; i <= sqrt(pnum); i++) {
+        if (pnum % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    cout << "The entered number is " << (isPrime ? "a prime number" : "not a prime numbere") << endl << endl;
+
 
 
     /* prob5:
@@ -48,6 +81,30 @@ int main() {
        2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71 73 79 83 89 97
        The total number of prime numbers between 1 to 100 is: 25
      */
+    int s_, e_;
+    cout << "Input number for starting range: " << flush;
+    cin >> s_;
+    cout << "Input number for ending range: " << flush;
+    cin >> e_;
+    cout << "The prime numbers between " << s_ << " and " << e_ << " are: " << flush;
+
+    int numPrime = 0;
+    for (int i = max(2,s_); i <= e_; i++) {
+        // first we need to check whether i is prime or not
+        bool isPrime = true;
+        for (int j = 2; j <= sqrt(i); j++) {
+            if (i % j == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            cout << i << " ";
+            numPrime++;
+        }
+    }
+    cout << endl;
+    cout << "The total number of prime numbers between " << s_ << " and " << e_ << " is: " << numPrime << endl << endl;
 
 
     /* prob6:
@@ -56,6 +113,13 @@ int main() {
        Input a number to find the factorial: 5
        The factorial of the given number is: 120
      */
+    int fact;
+    cout << "Input a number to find the factorial: " << flush;
+    cin >> fact;
+    for (int i = fact-1; i > 1; i--) {
+        fact *= i;
+    }
+    cout << "The factorial of the given number is: " << fact << endl << endl;
 
 
     /* prob7:
@@ -64,6 +128,25 @@ int main() {
        Input a number to find the last prime number occurs before the number: 50
        47 is the last prime number before 50
      */
+    int origPrime, lastPrime;
+    cout << "Input a number the last prime number occurs before the number: " << flush;
+    cin >> origPrime;
+    for (int i = origPrime; i > 2; i--) {
+        bool isPrime = true;
+        for (int j = 2; j <= sqrt(i); j++) {
+            if (i % j == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) {
+            lastPrime = i;
+            break;
+        }
+
+    }
+    cout << lastPrime << "is the last prime before " << origPrime << endl << endl;
+
 
 
     /* prob8:
@@ -73,6 +156,20 @@ int main() {
        Input the second number: 15
        The Greatest Common Divisor is: 5
      */
+    int fNum, sNum;
+    cout << "Input the first number: " << flush;
+    cin >> fNum;
+    cout << "Input the second number: " << flush;
+    cin >> sNum;
+    int small = min(fNum, sNum);
+    int large = max(fNum, sNum);
+
+    while ( small != 0) {
+        int temp = small;
+        small = large % temp;
+        large = temp;
+    }
+    cout << "The Greatest Common Divisor is: " << large << endl;
 
 
     /* prob9:
@@ -81,6 +178,16 @@ int main() {
        Input a number: 1234
        The sum of digits of 1234 is: 10
      */
+    int digits, origDigits;
+    cout << "Input a number: " << flush;
+    cin >> origDigits;
+    digits = origDigits;
+    int digitSum = 0;
+    do {
+        digitSum = digitSum + digits % 10;
+        digits = digits / 10;
+    } while (digits != 0);
+    cout << "The sum of digits of " << digits << " is: " << digitSum << endl << endl;
 
 
     /* prob10:
@@ -94,11 +201,16 @@ int main() {
        1/5^5 = 0.00032
        The sum of the above series is: 1.29126
      */
+    cout << "Input the value for nth term: " << flush;
+    int nth;
+    cin >> nth;
+    double series = 0;
+    for (int i=1; i <= nth; i++) {
+        double term = 1.0/pow(i,i);
+        cout << i << "/" << i << "^" << i << "=" << term << endl;
+        series += term;
+    }
+    cout << "The sum of the above series is : " << series << endl << endl;
 
-
-
-
-
-
-
+    return 0;
 }
