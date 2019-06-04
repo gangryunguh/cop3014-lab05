@@ -1,5 +1,7 @@
 //
 // Loop exercises from www.w3resource.com
+//   - solution: prepared by Gang-Ryung
+//   - TODO: error checking
 //
 #include <iostream>
 #include <cmath>
