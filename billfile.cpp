@@ -22,17 +22,21 @@ int main()
 
 	// Fill in the appropriate code in the blank below
 
-	<< setprecision(2) << fixed << showpoint;	// formatted output
+	dataOut << setprecision(2) << fixed << showpoint;	// formatted output
 
 
 
 	// Fill in the input statement that brings in the
 	// quantity and price of the item
+    dataIn >> quantity >> itemPrice;
 
 	// Fill in the assignment statement that determines the total bill.
+    totalBill = quantity * itemPrice;
 
 	// Fill in the output statement that prints the total bill, with a label,
 	// to an output file
-
+    dataOut << "The total bill is $" << totalBill << endl;
+    dataOut.close();
+    dataIn.close();
 	return 0;
 }
