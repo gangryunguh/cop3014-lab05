@@ -124,6 +124,7 @@ int main() {
        The sum of the sarise = 111105
      */
 
+
     /* prob21:
        Write a program to display up to i-th triangular numbers [ 1, 3, 6, 10, 15, 21, ... ].
        Sample Output:
