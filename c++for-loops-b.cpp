@@ -261,6 +261,24 @@ int main() {
     }
     cout << "The sum of the sarise = " << sum20 << endl << endl;
 
+
+    /* prob21:
+       Write a program to display up to i-th triangular numbers [ 1, 3, 6, 10, 15, 21, ... ].
+       Sample Output:
+       Input number of terms: 7
+       1, 3, 6, 10, 15, 21, 28
+     */
+    int prob21;
+    cout << "Input number of terms for triangular numbers: " << flush;
+    cin >> prob21;
+
+    int sum21 = 0;
+    for (int i=1; i <= prob21; i++) {
+        sum21 += i;
+        cout << sum21 << "," ;
+    }
+    cout << '\b' << endl;
+
     return 0;
 
 }
